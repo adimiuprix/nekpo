@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Popular;
+use App\Models\Category;
+
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $populars = Popular::with(['product', 'vendor'])->get();
+        $categories = Category::with(['products' => function($query) {
+            $query->distinct();
+        }])->get();
+
+        return view('home', [
+            'populars' => $populars,
+            'categories' => $categories
+        ]);
     }
 
     public function invoices()

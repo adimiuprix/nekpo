@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('code', 20)->unique();
             $table->string('website')->nullable();
             $table->string('contact_email')->nullable();
-            $table->string('phone_number')->nullable();
             $table->text('address')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();

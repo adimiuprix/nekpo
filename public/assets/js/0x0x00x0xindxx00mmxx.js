@@ -32,35 +32,7 @@ document.getElementById('scrollRight').addEventListener('click', function() {
     });
 });
 
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("hero").classList.remove("hidden");
 document.getElementById("heroo").classList.add("swiper-wrapper");
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const panelTopup = document.getElementById("game");
-    const items = panelTopup.querySelectorAll(".category-item");
-    const showAllButton = document.getElementById("showAllButton2");
-    const buttonContainer = document.getElementById("buttonContainer2");
-    
-    let visibleItems = 12;
-    
-    function updateVisibility() {
-        items.forEach((item, index) => {
-            item.style.display = index < visibleItems ? "block" : "none";
-        });
-        
-        if (items.length <= 12) {
-            buttonContainer.style.display = "none";
-        } else {
-            buttonContainer.style.display = visibleItems >= items.length ? "none" : "block";
-        }
-    }
-    
-    updateVisibility();
-    
-    showAllButton.addEventListener("click", () => {
-        visibleItems += 12;
-        updateVisibility();
-    });
 });

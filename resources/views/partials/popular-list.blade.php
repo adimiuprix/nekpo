@@ -8,12 +8,9 @@
         <p class="pl-6 text-xs">Beberapa produk yang paling populer saat ini.</p>
     </div>
     <div class="grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-3 mt-3">
-        <x-populers />
-        <x-populers />
-        <x-populers />
-        <x-populers />
-        <x-populers />
-        <x-populers />
+        @foreach ($populars as $pop)
+        <x-populers :product="$pop->product" :vendor="$pop->vendor" />
+        @endforeach
     </div>
 </div>
 {{-- Daftar Populer --}}

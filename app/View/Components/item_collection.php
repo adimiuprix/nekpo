@@ -3,17 +3,19 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class item_collection extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $product;
+
+    public function __construct($product)
     {
-        //
+        $this->product = $product;
     }
 
     /**

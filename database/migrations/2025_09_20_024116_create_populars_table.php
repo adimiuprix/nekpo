@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('populars', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id')->unsigned();
-            $table->integer('vendor_id')->unsigned();
+            $table->foreignId('product_id')->nullable();
+            $table->foreignId('vendor_id')->nullable();
             $table->timestamps();
         });
     }
