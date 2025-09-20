@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->integer('category_id')->unsigned();
-            $table->integer('item_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->decimal('price', 15, 2);
-            $table->string('code')->unique();
+            $table->string('item_code')->unique();
             $table->enum('status', ['available', 'out_of_stock', 'issue'])->default('available');
             $table->timestamps();
         });

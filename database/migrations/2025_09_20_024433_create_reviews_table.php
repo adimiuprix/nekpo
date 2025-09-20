@@ -16,8 +16,8 @@ return new class extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->integer('item_id')->unsigned();
-            $table->text('review');
-            $table->date('review_date');
+            $table->text('review')->nullable();
+            $table->date('review_date')->nullable();
             $table->timestamps();
         });
     }

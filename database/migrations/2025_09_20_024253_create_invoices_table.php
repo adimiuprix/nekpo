@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('item_id');
-            $table->date('invoice_date');
+            $table->date('invoice_date')->nullable();
             $table->decimal('amount', 10, 2);
             $table->enum('status', ['unpaid', 'paid', 'pending', 'cancelled', 'failed'])->default('unpaid');
             $table->string('payment_method')->nullable();
