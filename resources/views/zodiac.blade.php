@@ -3,7 +3,7 @@
         <div class="mx-auto w-full max-w-xl space-y-8 px-4 pt-24 pb-48">
             <div>
                 <a href="/" style="outline: none;">
-                    <img src="https://cupu.me/assets/logo/drgedrg.gif" width="300" height="300" class="mx-auto h-32 w-auto" style="color: transparent;" alt="WeJizy." />
+                    <img src="{{ asset('assets/logo/drgedrg.gif') }}" width="300" height="300" class="mx-auto h-32 w-auto" style="color: transparent;" alt="WeJizy." />
                 </a>
                 <h2 class="mt-2 text-center text-3xl font-bold tracking-tight text-white">Kalkulator Zodiac</h2>
                 <p class="mt-2 text-center text-sm text-white">

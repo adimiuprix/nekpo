@@ -34,7 +34,7 @@
                 <div class="flex">
                     <a href="index.html" style="outline: none;">
                         <span class="sr-only"> Neoera Store</span>
-                        <img src="assets/logo/drgedrg.gif" class="h-7 w-auto" width="100" height="43" style="color: transparent;" alt="Neoera Store" />
+                        <img src="{{ asset('assets/logo/drgedrg.gif') }}" class="h-7 w-auto" width="100" height="43" style="color: transparent;" alt="Neoera Store" />
                     </a>
                 </div>
             </div>

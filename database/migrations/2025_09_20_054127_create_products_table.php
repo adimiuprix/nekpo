@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('slug')->unique();
-            $table->string('image_path')->nullable();
+            $table->string('image')->nullable();
+            $table->string('banner')->nullable();
             $table->foreignId('vendor_id')->nullable()->constrained('vendors')->nullOnDelete();
             $table->timestamps();
         });

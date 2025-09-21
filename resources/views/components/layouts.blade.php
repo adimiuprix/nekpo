@@ -17,11 +17,11 @@
         <meta property="og:keywords" content="Cupu Store,topupml,topupff,ff,ml,topup murah, Cupu,internasional" />
         <meta property="og:description" content="Layanan top up game dan voucher terlengkap dengan proses yang cepat dan aman buka 24 Jam dengan channel pembayaran terlengkap Indonesia." />
         <meta property="og:url" content="" />
-        <meta property="og:image" content="assets/logo/ysirfuf.png" />
+        <meta property="og:image" content="{{ asset('assets/logo/ysirfuf.png') }}" />
         <meta name="title" content="CUPU STORE -  Platform Top Up Game Termurah Se-Indonesia" />
         <meta name="description" content="Layanan top up game dan voucher terlengkap dengan proses yang cepat dan aman buka 24 Jam dengan channel pembayaran terlengkap Indonesia." />
         <!-- Favicon -->
-        <link rel="shortcut icon" href="assets/logo/ysirfuf.png" />
+        <link rel="shortcut icon" href="{{ asset('assets/logo/ysirfuf.png') }}" />
         <!-- Title -->
         <title>CUPU STORE - Platform Top Up Game Termurah Se-Indonesia</title>
         <!-- Stylesheets and Fonts -->
@@ -80,11 +80,11 @@
             position: relative;
             }
         </style>
-        <link rel="stylesheet" href="assets/css/x0xx0x0x0x0xx0.css" />
-        <link rel="stylesheet" href="assets/css/0xx00xxx0x00x0tmplttm0x0xxzx0xxXx0x0xx0xx.css" />
-        <link rel="stylesheet" href="assets/css/0x0x0x00ordr0x0x.css" />
-        <link rel="stylesheet" href="assets/css/0x0x0x0x00xx00x0x0x0x00x0x0x0x0x0x00xxx.css" />
-        <link rel="stylesheet" href="assets/css/oxooxoxoxoxordxoxoxxo.css" />
+        <link rel="stylesheet" href="{{ asset('assets/css/x0xx0x0x0x0xx0.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/0xx00xxx0x00x0tmplttm0x0xxzx0xxXx0x0xx0xx.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/0x0x0x00ordr0x0x.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/0x0x0x0x00xx00x0x0x0x00x0x0x0x0x0x00xxx.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/oxooxoxoxoxordxoxoxxo.css') }}" />
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.0/dist/cdn.min.js"></script>
     </head>
     <body class="bg-gradient-theme text-white antialiased">
@@ -121,17 +121,15 @@
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.lottielab.com/s/lottie-player@1.x/player-web.min.js"></script>
-        <script src="assets/js/oo324ddod2323sd2d2mppmx.js"></script>
-        <script src="assets/js/oo324ddod2323sd2d.js"></script>
-        <script src="assets/js/0x0x00x0xindxx00mmxx.js"></script>
+        <script src="{{ asset('assets/js/oo324ddod2323sd2d2mppmx.js') }}"></script>
+        <script src="assets/js/main.js"></script>
         <script>
             $.ajaxSetup({
                 headers: {
                     "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
                 },
             });
-        </script>
-        <script>
+
             var delay = (function () {
                 var e = 0;
                 return function (r, a) {
@@ -158,16 +156,14 @@
                         });
                     }, 100);
             });
-        </script>
-        <script>
+
             document.getElementById("searchProds").addEventListener("input", function () {
                 var lottieContainer = document.getElementById("lottie-container");
                 if (lottieContainer) {
                     lottieContainer.style.display = "none";
                 }
             });
-        </script>
-        <script>
+
             document.addEventListener("DOMContentLoaded", function () {
                 let t = document.querySelectorAll("[data-tabs-toggle]"),
                     e = document.querySelectorAll("[data-tabs-content]"),
@@ -190,8 +186,7 @@
                         });
                     });
             });
-        </script>
-        <script>
+
             function updateTimer() {}
             document.addEventListener("DOMContentLoaded", function () {
                 updateTimer();

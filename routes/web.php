@@ -6,6 +6,7 @@ use App\Http\Controllers\ServiceAuth\LoginController;
 use App\Http\Controllers\ServiceAuth\RegisterController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/show-item/{slug}', [HomeController::class, 'show_item'])->name('show.item');
 Route::get('/invoices', [HomeController::class, 'invoices'])->name('invoices');
 Route::get('/price-list', [HomeController::class, 'price_list'])->name('price_list');
 Route::get('/leaderboard', [HomeController::class, 'leaderboard'])->name('leaderboard');

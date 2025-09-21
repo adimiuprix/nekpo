@@ -1,5 +1,5 @@
 @props(['product'])
-<a href="" class="melpazoom">
+<a href="{{ route('show.item', $product->slug) }}" class="melpazoom">
     <div
         class="group category-item relative overflow-hidden rounded-xl bg-muted transition-transform duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-murky-900"
         style="display: block;"
@@ -9,7 +9,7 @@
                 alt="FREE FIRE"
                 data-nimg="{{ $product->id }}"
                 class="h-full w-full object-cover object-center"
-                src="{{ asset('public/assets/thumbnail/' . ltrim($product->image_path, '/')) }}"
+                src="{{ asset('public/assets/thumbnail/' . ltrim($product->image, '/')) }}"
                 style="color: transparent;"
                 />
         </div>

@@ -3,7 +3,7 @@
         <div class="flex items-center justify-start">
             <a href="{{ route('home') }}" style="outline: none;">
                 <span class="sr-only">Neoera Store</span>
-                <img alt="Neoera Store" fetchpriority="high" width="1000" height="1000" decoding="async" data-nimg="1" class="h-9 w-auto lg:h-10" src="assets/logo/drgedrg.gif" style="color: transparent;" />
+                <img alt="Neoera Store" fetchpriority="high" width="1000" height="1000" decoding="async" data-nimg="1" class="h-9 w-auto lg:h-10" src="{{ asset('assets/logo/drgedrg.gif') }}" style="color: transparent;" />
             </a>
         </div>
 

@@ -2,7 +2,7 @@
                     <h2 id="footer-heading" class="sr-only">Footer</h2>
                     <div class="container pb-8">
                         <div class="pt-4">
-                            <img src="assets/logo/drgedrg.gif" alt="Logo" width="100" class="w-auto h-24 mb-4" />
+                            <img src="{{ asset('assets/logo/drgedrg.gif') }}" alt="Logo" width="100" class="w-auto h-24 mb-4" />
                             <p class="text-sm leading-6">Layanan top up game dan voucher terlengkap dengan proses yang cepat dan aman buka 24 Jam dengan channel pembayaran terlengkap Indonesia.</p>
                             <div class="text-end space-x-4 mt-2">
                                 <a href="https://www.facebook.com/" target="_blank">

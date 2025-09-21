@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     let t = document.querySelectorAll("[data-tabs-toggle]"),
         e = document.querySelectorAll("[data-tabs-content]"),
@@ -34,5 +33,4 @@ document.getElementById('scrollRight').addEventListener('click', function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("hero").classList.remove("hidden");
-document.getElementById("heroo").classList.add("swiper-wrapper");
 });
