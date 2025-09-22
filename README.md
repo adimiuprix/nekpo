@@ -1,61 +1,183 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Nekpo - Game Top-up & Gaming Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Deskripsi Project
 
-## About Laravel
+Nekpo adalah platform e-commerce terintegrasi yang spesialisasi dalam layanan top-up game dan berbagai fitur gaming lainnya. Platform ini dibangun menggunakan framework Laravel terbaru (Laravel 12) dengan PHP 8.2+ untuk menyediakan pengalaman berbelanja digital yang cepat dan aman.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🛒 Layanan Top-up Game
+- **Top-up Otomatis**: Sistem top-up instan untuk berbagai game popular
+- **Multi-Vendor**: Mendukung berbagai vendor dan publisher game terkemuka
+- **Bundle & Package**: Penawaran paket bundel khusus untuk pengalaman gaming maksimal
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🎮 Platform Gaming
+- **Leaderboard**: Sistem peringkat pemain global
+- **Winrate Calculator**: Kalkulator tingkat kemenangan dengan analisa detail
+- **Magic Wheel**: Permainan putar roda keberuntungan
+- **Zodiac Fortune**: Fitur ramalan nasib berbasis zodiak
 
-## Learning Laravel
+### 💼 Sistem E-commerce
+- **Manajemen Produk**: Sistem produk dengan kategori terorganisir
+- **Keranjang Belanja**: Pengalaman belanja yang intuitif
+- **Invoice System**: Manajemen transaksi yang komprehensif
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Teknologi Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Framework**: Laravel 12.0
+- **Bahasa Programming**: PHP 8.2+
+- **Database**: MySQL/SQLite
+- **Frontend**: Blade Templates, CSS, JavaScript
+- **Testing**: Pest PHP
+- **Development Tools**: Vite, npm, Composer
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Struktur Database
 
-## Laravel Sponsors
+### Model Utama
+- **User**: Sistem autentikasi pengguna
+- **Product**: Produk top-up dan item game
+- **Vendor**: Publisher dan developer game
+- **Category**: Kategorisasi produk
+- **Bundle**: Paket bundel produk
+- **Item**: Item individual dalam paket
+- **Slider**: Konten slider halaman depan
+- **Popular**: Item terpopuler
+- **Invoice**: Manajemen transaksi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Relasi Database
+- Product belongs to Vendor
+- Product belongs to Category
+- Bundle belongs to Product
+- Item belongs to Product
 
-### Premium Partners
+## Deployment & Development
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Prerequisites
+- PHP 8.2+
+- Composer
+- Node.js & npm
+- MySQL atau SQLite
 
-## Contributing
+### Instalasi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Clone repository
+```bash
+git clone https://github.com/adimiuprix/nekpo.git
+cd nekpo
+```
 
-## Code of Conduct
+2. Install dependencies PHP
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Setup environment
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+4. Setup database
+```bash
+php artisan migrate
+php artisan db:seed
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+5. Install assets
+```bash
+npm install
+npm run dev
+```
+
+6. Jalankan server development
+```bash
+php artisan serve
+```
+
+### Commands Development
+```bash
+# Jalankan semua service sekaligus (server, queue, vite)
+composer run dev
+
+# Jalankan testing
+composer run test
+```
+
+## Struktur Folder
+
+```
+nekpo/
+├── app/                    # Aplikasi Laravel (Models, Controllers, Views)
+│   ├── Http/Controllers/   # Controller logic
+│   ├── Models/            # Eloquent models
+│   ├── View/Components/   # Blade components
+├── database/              # Migrations, seeders, factories
+├── public/                # Static assets
+│   ├── assets/           # Gambar, CSS, JS
+│   │   ├── banner/       # Banner slider
+│   │   ├── banner_product/ # Banner produk game
+│   │   ├── image/        # Gambar umum
+│   │   └── js/           # JavaScript files
+├── resources/            # Sumber daya frontend
+│   ├── css/              # Stylesheets
+│   ├── js/               # JavaScript source
+│   └── views/            # Blade templates
+├── routes/               # definisi route web.php dan console.php
+├── tests/                # Testing framework dengan Pest
+└── config/               # Konfigurasi aplikasi
+```
+
+## Game & Vendor Didukung
+
+Platform ini mendukung berbagai game populer termasuk:
+
+### Mobile Games
+- Mobile Legends
+- PUBG Mobile
+- COD Mobile
+- Clash of Clans
+- Lineage 2M
+- League of Legends
+- FIFA Mobile
+- One Punch Man: The Strongest
+- Racing Master
+- Undawn
+
+### Console/PC Games
+- Genshin Impact
+- Free Fire
+- Valorant
+
+## API & Integrasi
+
+- **Payment Gateway**: Integrasi dengan berbagai metode pembayaran
+- **Third-party Services**: Auth services dan layanan eksternal
+- **Queue System**: Background processing untuk order
+
+## Testing
+
+Project menggunakan Pest PHP untuk testing. Jalankan semua test dengan:
+
+```bash
+composer run test
+```
+
+## Kontribusi
+
+1. Fork repository
+2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Kontak
+
+Project Link: [https://github.com/adimiuprix/nekpo](https://github.com/adimiuprix/nekpo)
+
+---
+
+**Nekpo** - Membawa pengalaman gaming digital ke level berikutnya 🚀
