@@ -26,8 +26,8 @@ class HomeController extends Controller
     }
 
     public function show_item($slug){
-        $product = Product::with(['items', 'vendor'])->where('slug', $slug)->firstOrFail();
-
+        $product = Product::with(['vendor', 'bundles.items'])->where('slug', $slug)->firstOrFail();
+        
         return view('show_product', [
             'product' => $product
         ]);

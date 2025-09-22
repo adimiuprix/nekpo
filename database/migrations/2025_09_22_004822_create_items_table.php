@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->nullable()->constrained('categories');
             $table->decimal('price', 15, 2);
             $table->string('item_code')->unique();
             $table->enum('status', ['available', 'out_of_stock', 'issue'])->default('available');
+            $table->foreignId('bundle_id')->constrained('bundles')->onDelete('cascade');
             $table->timestamps();
         });
     }

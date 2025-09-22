@@ -53,6 +53,10 @@ class ProductCategorySeeder extends Seeder
                 'product_id' => 10,
                 'category_id' => 1
             ],
+            [
+                'product_id' => 11,
+                'category_id' => 1
+            ],
         ]);
     }
 }

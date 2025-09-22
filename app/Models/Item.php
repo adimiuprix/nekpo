@@ -11,4 +11,9 @@ class Item extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
+    public function bundle()
+    {
+        return $this->belongsTo(Bundle::class);
+    }
 }

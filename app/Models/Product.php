@@ -30,4 +30,9 @@ class Product extends Model
     {
         return $this->belongsTo(Vendor::class, 'vendor_id');
     }
+
+    public function bundles()
+    {
+        return $this->hasMany(Bundle::class);
+    }
 }

@@ -7,23 +7,11 @@
         </div>
 
         <form action="https://cupu.me/id/sign-in" method="post" class="mt-8 space-y-6">
-            <input type="hidden" name="_token" value="tDmKalxuEuOo4iinx0q1TBa611kUZR27iJg2ZCiM" />
+            @csrf
             <div class="space-y-3 rounded-md shadow-sm">
-                <div>
-                    <label for="username" class="block text-xs font-medium text-white pb-2">Username</label>
-                    <div class="flex flex-col items-start">
-                        <input
-                            class="relative block w-full appearance-none border border-murky-600 bg-melpa-800 px-3 py-2 text-xs text-white placeholder-murky-200 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-75 rounded-md"
-                            type="text"
-                            id="username"
-                            autocomplete="username"
-                            placeholder="Username"
-                            name="username"
-                            required=""
-                        />
-                    </div>
-                    <span class="text-xs text-rose-500"></span>
-                </div>
+
+                <x-input label="User ID" type="text" id="username" name="username" placeholder="Masukkan ID Game" :required="true" />
+                
                 <div x-data="{ isPassword: true }">
                     <label for="password" class="block text-xs font-medium text-white pb-2">Kata sandi</label>
                     <div class="relative">
